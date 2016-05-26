@@ -9,7 +9,9 @@
               http://www.springframework.org/schema/mvc/spring-mvc.xsd http://www.springframework.org/schema/context
               http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
 
-    <mvc:annotation-driven />
+
+	
+
 
     <!-- 启动自动扫描该包下所有的Bean -->
     <context:component-scan base-package="com.mao.infocrawler"/>
@@ -23,9 +25,15 @@
         <property name="prefix" value="/WEB-INF/pages/"/>
         <property name="suffix" value=".jsp"/>
     </bean>
-
-    <!-- 对静态资源文件的访问 -->
-    <mvc:resources location="classpath:/static/" mapping="/static/**"/>
-
+    
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+    	<property name="defaultEncoding" value="utf-8"></property>
+    	<property name="maxUploadSize" value="10485760000"></property>
+    </bean>
+    
+	<!-- 扩充了注解驱动，可以将请求参数绑定到控制器参数 -->
+    <mvc:annotation-driven />
+    <mvc:resources mapping="/static/**" location="classpath:/static/"/>
+     <mvc:resources mapping="/upload/**" location="/upload/"/>
 </beans>
 

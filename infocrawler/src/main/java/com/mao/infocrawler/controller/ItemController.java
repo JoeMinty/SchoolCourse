@@ -116,7 +116,7 @@ public class ItemController {
     public ModelAndView detail(@PathVariable int itemId) {
 
         ModelAndView mv = new ModelAndView();
-        Item item = itemService.findOne(itemId);
+        Item item = itemService.findOneById(itemId);
         mv.addObject("item", item);
         mv.setViewName("detail");
         return mv;

@@ -12,7 +12,8 @@ import java.util.List;
  */
 public interface IOperations<T extends Serializable> {
 
-    T findOne(final int id);
+	
+    T findOneById(final int id);
 
     List<T> findAll();
 

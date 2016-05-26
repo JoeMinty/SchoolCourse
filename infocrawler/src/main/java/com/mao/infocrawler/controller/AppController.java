@@ -1,14 +1,12 @@
 package com.mao.infocrawler.controller;
 
-import com.mao.infocrawler.model.entity.Item;
 import com.mao.infocrawler.service.AppService;
+import com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-
-import java.util.List;
 
 /**
  * Created by mao on 2016/4/21.
@@ -16,26 +14,37 @@ import java.util.List;
 
 
 @Controller
-@RequestMapping("/")
 public class AppController {
 
     @Autowired
     private AppService service;
 
+    
     /**
      * test
      * @param model
      * @return
      */
-    @RequestMapping(value = { "/", "/list" }, method = RequestMethod.GET)
-    public String listItems(ModelMap model) {
+    @RequestMapping(value = "/redis2DB", method = RequestMethod.GET)
+    public String listItems(ModelMap model) throws MySQLIntegrityConstraintViolationException {
 
-        List<Item> itemList = service.findAll();
-        model.put("itemList", itemList);
-        model.addAttribute("message","list");
         service.redis2DB();
-        System.out.println(itemList);
-        return "list";
+        model.addAttribute("saved", "记录已存入数据库");
+        return "hello";
+    }
+
+    /**
+     *
+     * @param model
+     * @return
+     */
+    @RequestMapping(value = "/startCrawler", method = RequestMethod.GET)
+    public String startCrawler(ModelMap model) {
+
+//        service.startCrawler();
+//        model.addAttribute("finished", true);
+//        model.addAttribute("total", "共爬取"+service.total()+"条记录");
+        return "hello";
     }
 
 }

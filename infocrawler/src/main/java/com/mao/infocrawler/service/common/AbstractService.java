@@ -16,8 +16,8 @@ public abstract class AbstractService<T extends Serializable> implements IOperat
     protected abstract IOperations<T> getDao();
 
     @Override
-    public T findOne(final int id) {
-        return getDao().findOne(id);
+    public T findOneById(final int id) {
+        return getDao().findOneById(id);
     }
 
     @Override

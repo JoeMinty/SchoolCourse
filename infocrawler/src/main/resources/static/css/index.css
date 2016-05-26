@@ -1,0 +1,178 @@
+/*#background-img{
+	background-image: url(img/qq.png);
+	background-attachment: fixed;
+	height: 100%;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	position: absolute; z-index: -1;
+	margin:0;
+	padding:0;
+}*/
+
+
+#recommend-article{
+	margin-top:20px;
+	border-bottom: 1px solid #ddd;
+}
+
+
+#article-title a{
+	padding: 0;
+	color:#35393C;
+}
+
+#article-content{
+	line-height: 23px;
+	font-size: 14px;
+	padding: 3px 0;
+}
+
+#article-footer{
+	border-bottom: 1px solid #ddd; 
+}
+
+#article-footer span{
+	padding: 0 15px 10px 15px;
+}
+
+#hot-recommend{
+	margin-top:20px;
+	border-bottom: 1px solid #ddd;
+	padding: 0;
+}
+
+#day-recommend{
+	margin-top:20px;
+}
+
+#hot-tab{
+	margin:35px 0 0 0;
+	padding:0;
+}
+#hot-tab ul{
+	list-style:none;
+}
+
+#hot-tab li{
+	float:left;
+}
+
+.circle{
+	width: 10px;
+	height: 10px; 
+	border: 1px solid grey;
+	background: grey;
+	border-radius:50%; 
+	margin-right: 5px;
+}
+
+.circle-active{
+	background: #0FC9D2;
+	border: 1px solid #0FC9D2;
+	width: 12px;
+	height: 12px; 
+}
+
+#hot-content{
+	margin-top: 20px;
+}
+
+
+#suipian-content{
+	margin-top: 20px;
+	text-overflow:ellipsis;
+	overflow: hidden;
+	white-space:nowrap;
+}
+
+#content-suipian-detail{
+	padding:10px 0 0 0;
+	border:1px solid #ddd;
+	box-shadow: 1px 1px 2px #ddd;
+}
+#content-suipian-detail img{
+	width:50px;
+	height:50px;
+	border-radius:50%;
+}
+
+#content-suipian-username{
+	margin-top: 15px;
+}
+
+#content-suipian-comment{
+
+	padding:10px 0 0 0;
+	background-color:#EFEFEF;
+	text-align:center;
+}
+
+#content-suipian-detail:hover{
+	border:3px solid #ddd;
+}
+
+#content-suipian-detail-middleAndRight{
+	padding:10px 0 0 0;
+	border-right:1px solid #ddd;
+	border-top:1px solid #ddd;
+	border-bottom:1px solid #ddd;
+	box-shadow: 1px 1px 2px #ddd;
+}
+
+#content-suipian-detail-middleAndRight img{
+	width:50px;
+	height:50px;
+	border-radius:50%;
+}
+
+#content-suipian-detail-middleAndRight:hover{
+	border:3px solid #ddd;
+}
+
+#row-2{
+	margin-top: 5px;
+}
+
+#recommend-song img{
+	height:200px;border-radius:5px;
+}
+
+#right-tips-personal{
+	padding-left: 25px;
+	margin-top: 20px;
+	border-bottom: 1px solid #eee;
+}
+
+#right-tips-personal-second{
+	padding: 0;
+	margin-top: 20px;
+	border-bottom: 1px solid #eee;
+}
+
+#right-tips-personal-title{
+	padding:0;
+	border-bottom: 1px solid #eee;
+}
+
+#huati-detail{
+	margin: 5px 0;
+	padding:0;
+}
+
+#huati-title,#huati-nums{
+	margin-top: 10px;
+}
+
+#huati-detail img{
+	border-radius: 5px;
+	width:40px;
+	height:40px;
+}
+
+#right-tips-personal i{
+	padding-right:10px;
+}
+
+#huati-title a{
+	color:#333;
+}

@@ -5,6 +5,14 @@ package com.mao.infocrawler.utils;
  */
 public class StringUtil {
 
+	public final static String USER_ID = "userid";
+	
+	public final static String USER_NAME = "username";
+	
+	public final static String USER_TYPE = "usertype";
+	
+	public final static String USER_MESSAGE_COUNT = "msgcount";
+	
     /**
      * str是否为空
      * @param str

@@ -1,0 +1,63 @@
+#info-detail{
+	margin-top:100px;
+}
+
+#degree{
+	margin:25px;
+}
+
+#pad-left{
+	padding:10px 0;
+}
+
+#pad-left-b{
+	padding:15px 0;
+}
+
+#info-degree{
+			border-radius:10px;
+			margin-top:50px;
+			border:1px solid #ddd;
+			min-height:50px;
+		}
+
+		#content-detail{
+			padding-left: 50px;
+			border-left:1px solid #ddd;
+			border-right:1px solid #ddd;
+			border-bottom:1px solid #ddd;
+		}
+
+		#person-info{
+			margin-top:50px;
+			border:1px solid #ddd;
+			border-top-left-radius:10px;
+			border-top-right-radius:10px;
+		}
+
+		.form-group label{
+			width:80px;
+			text-align:right;
+		}
+
+		#btn-edit{
+			padding:20px 0 10px 0;
+			border-left:1px solid #ddd;
+			border-right:1px solid #ddd;
+			border-bottom:1px solid #ddd;
+			border-bottom-left-radius:10px;
+			border-bottom-right-radius:10px;
+		}
+
+#introduction{
+	border:1px solid #ddd; 
+	width:300px;
+}
+
+#edit-img{
+	padding-left:50px;
+}
+
+.form-group img{
+	width:50px;height:50px;
+}

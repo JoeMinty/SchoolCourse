@@ -34,9 +34,10 @@ public abstract class AbstractHibernateDao<T extends Serializable> implements IO
     protected final void close() {
         sessionFactory.getCurrentSession().close();
     }
-
+    
+    
     @Override
-    public final T findOne(final int id) {
+    public final T findOneById(final int id) {
         return (T)getCurrentSession().get(clazz, id);
     }
 
@@ -68,7 +69,7 @@ public abstract class AbstractHibernateDao<T extends Serializable> implements IO
 
     @Override
     public final void deleteById(final int entityId) {
-        final T entity = findOne(entityId);
+        final T entity = findOneById(entityId);
         Preconditions.checkState(entity != null);
         delete(entity);
     }

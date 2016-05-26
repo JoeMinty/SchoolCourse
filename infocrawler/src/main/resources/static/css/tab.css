@@ -1,0 +1,29 @@
+#right-person-info{
+			width: 160px;
+			margin-right: 10%
+		}
+
+		#right-person-info-li{
+			width: 100%;
+		} 
+	
+		#right-person-info-li img{
+			width:25px;height: 25px;
+		} 
+
+		#user-nickname{
+			padding-left: 20px;
+		}
+
+		#dropdown-info{
+			width: 160px;
+		}
+
+		#not-last-li{
+			border-bottom: 1px solid #ddd;
+		}
+
+		#dropdown-info li span{
+			padding-right: 50px;
+		}
+	

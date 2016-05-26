@@ -1,0 +1,31 @@
+.content{
+			margin:200px auto; 
+		}
+
+		.content img{
+			width: 100%;
+			-webkit-box-shadow:  0 1px 5px rgba(0,0,0,.5); 
+			-moz-box-shadow:  0 1px 5px rgba(0,0,0,.5); 
+			box-shadow:  0 1px 5px rgba(0,0,0,.5); 
+		} 
+
+		#right-content{
+			padding-top: 60px;
+			padding-left: 20px;
+		}
+
+		#right-content-tab{
+			padding-top: 20px;
+		}
+
+		#regist form , #login form{
+			padding-top: 20px;
+		}
+
+		#forget{
+			padding-left: 20px;
+		}
+
+		.list-unstyled li a{
+			padding-left: 50px;
+		}

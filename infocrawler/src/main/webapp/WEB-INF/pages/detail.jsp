@@ -18,7 +18,7 @@
 
     <p>来源：${item.resource}</p>
 
-    <p>爬取时间：${item.time}</p>
+    <p class="bootstrap-class">爬取时间：${item.time}</p>
 
     <p>链接：<a target="_blank" href="${item.url}">点击进入</a></p>
 </div>

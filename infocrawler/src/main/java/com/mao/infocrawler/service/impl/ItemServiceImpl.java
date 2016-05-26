@@ -38,20 +38,6 @@ public class ItemServiceImpl extends AbstractService<Item> implements ItemServic
         return page;
     }
 
-//    @Override
-//    public Page queryByKeyword(String keyword, Page page) {
-//        String sql = "SELECT * FROM item WHERE title LIKE '%"+keyword+"%'";
-//        page.setContent(dao.queryByPage(sql, page));
-//        return page;
-//    }
-//
-//    @Override
-//    public Page filterByTime(String time, Page page) {
-//        String sql = "SELECT * FROM item WHRER time = " + time;
-//        page.setContent(dao.queryByPage(sql, page));
-//        return page;
-//    }
-
     @Override
     public List<Item> queryNoPage(String keyword, String time, String resource) {
 
