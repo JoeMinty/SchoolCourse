@@ -53,5 +53,9 @@ public class AnswersServiceImpl extends AbstractService<Answers> implements Answ
 		return result;
 	}
 
+	@Override
+	public List<String> getHotQuestions(String sql) {
+		return dao.getHotQuestions(sql);
+	}
 
 }

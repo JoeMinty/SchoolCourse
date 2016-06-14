@@ -12,4 +12,5 @@ public interface AnswersDao extends IOperations<Answers> {
     //除了实现IOperations中的基本操作之外，特定的DAO要实现其他操作可以在对应的接口DAO中定义方法
 	 List<Answers> findAllByTime(final String sql);
 	 
+	 List<String> getHotQuestions(String sql);
 }

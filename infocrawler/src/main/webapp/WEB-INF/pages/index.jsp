@@ -53,7 +53,7 @@
 
 		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		      <ul class="nav navbar-nav" >
-		        <li><a href="/infocrawler/topage?pagename=index">主页<span class="sr-only">(current)</span></a></li>
+		        <li><a href="/infocrawler/pagehome">主页<span class="sr-only">(current)</span></a></li>
 		        <li><a href="/infocrawler/topage?pagename=about">课程简介</a></li>
 		        <li><a href="/infocrawler/topage?pagename=catlog">教学大纲</a></li>
 		        <li id="onlineExam"><a href="/infocrawler/initExamPage">在线考试</a></li>
@@ -298,72 +298,38 @@
 			<!--问题广场-->
 			<div class="col-md-12" id="right-tips-personal-second">
 				<div class="col-md-12" id="right-tips-personal-title">
-					<div class="col-md-6"><h4><small>热门问题</small></h4></div>
-				</div>
-				<!--三个话题-->
-				<div class="col-md-12" id="huati-detail">
-					
-					<!--标题-->
-					<div class="col-md-8" id="huati-title"><a href="#">JSP有哪些内置对象？</a></div>
-					<!--子模块-->
-					<div class="col-md-2" id="huati-nums"><span class="badge">30</span></div>
-				</div>
-				<div class="col-md-12" id="huati-detail">
-					
-					<!--标题-->
-					<div class="col-md-8" id="huati-title"><a href="#">SpringMvc有哪些特点？</a></div>
-					<!--子模块-->
-					<div class="col-md-2" id="huati-nums"><span class="badge">25</span></div>
-				</div>
-				<div class="col-md-12" id="huati-detail">
-					<!--标题-->
-					<div class="col-md-8" id="huati-title"><a href="#">Java与C++的区别？</a></div>
-					<!--子模块-->
-					<div class="col-md-2" id="huati-nums"><span class="badge">20</span></div>
-				</div>
-				<div class="col-md-12" id="huati-detail">
-					<!--标题-->
-					<div class="col-md-8" id="huati-title"><a href="#">如何深入浅出redis？</a></div>
-					<!--子模块-->
-					<div class="col-md-2" id="huati-nums"><span class="badge">15</span></div>
-				</div>
-				<div class="col-md-12" id="huati-detail">
-					<!--标题-->
-					<div class="col-md-8" id="huati-title"><a href="#">Tomcat如何部署一个web程序？</a></div>
-					<!--子模块-->
-					<div class="col-md-2" id="huati-nums"><span class="badge">10</span></div>
+					<div class="col-md-6"><h4><strong>热门问题</strong></h4></div>
 				</div>
 				
-				<div class="col-md-12" id="huati-detail">
-					<!--标题-->
-					<div class="col-md-8" id="huati-title"><a href="#">Tomcat如何部署一个web程序？</a></div>
-					<!--子模块-->
-					<div class="col-md-2" id="huati-nums"><span class="badge">10</span></div>
+					<c:forEach var="question" items="${questionInfoList }">
+						<div class="col-md-12" id="huati-detail">
+						
+							<!--标题-->
+							<div class="col-md-8" id="huati-title"><a href="/infocrawler/showQuestionDetail?questionid=${question.id}">${question.questionname}</a></div>
+							<!--子模块-->
+							<div class="col-md-2" id="huati-nums"><span class="badge">${question.answernum}</span></div>
+						</div>
+					
+					</c:forEach>
+				
+				
+		
+				
+			</div>
+			
+			<div class="col-md-12" id="right-tips-personal-second">
+				<div class="col-md-12" id="right-tips-personal-title">
+					<div class="col-md-6"><h4><strong>最新作业</strong></h4></div>
+					<div class="col-md-3 col-md-offset-3"><h4><small><a href="/infocrawler/allHomeworks">更多</a></small></h4></div>
 				</div>
-				<div class="col-md-12" id="huati-detail">
-					<!--标题-->
-					<div class="col-md-8" id="huati-title"><a href="#">Tomcat如何部署一个web程序？</a></div>
-					<!--子模块-->
-					<div class="col-md-2" id="huati-nums"><span class="badge">10</span></div>
-				</div>
-				<div class="col-md-12" id="huati-detail">
-					<!--标题-->
-					<div class="col-md-8" id="huati-title"><a href="#">Tomcat如何部署一个web程序？</a></div>
-					<!--子模块-->
-					<div class="col-md-2" id="huati-nums"><span class="badge">10</span></div>
-				</div>
-				<div class="col-md-12" id="huati-detail">
-					<!--标题-->
-					<div class="col-md-8" id="huati-title"><a href="#">Tomcat如何部署一个web程序？</a></div>
-					<!--子模块-->
-					<div class="col-md-2" id="huati-nums"><span class="badge">10</span></div>
-				</div>
-				<div class="col-md-12" id="huati-detail">
-					<!--标题-->
-					<div class="col-md-8" id="huati-title"><a href="#">Tomcat如何部署一个web程序？</a></div>
-					<!--子模块-->
-					<div class="col-md-2" id="huati-nums"><span class="badge">10</span></div>
-				</div>
+				
+				<c:forEach var="item" items="${homeworklist }">
+					<div class="col-md-12" id="huati-detail">
+						<!--标题-->
+						<div class="col-md-8" id="huati-title">${item.homeworkcontent}</div>
+						
+					</div>
+				</c:forEach>	
 			</div>
 		</div>
 

@@ -187,7 +187,7 @@ public class ExamController {
 		exam.setPositive2result(positive2);
 		exam.setPositive2score(0);
 		// 最后需要放出来
-		//examService.create(exam);
+		examService.create(exam);
 		
 		mv.addObject("chooseList", chooseList);
 		mv.addObject("choosescore", choosescore);
@@ -256,9 +256,13 @@ public class ExamController {
 		
 		String tempp = (String) request.getSession().getAttribute(
 				StringUtil.USER_MESSAGE_COUNT);
-		int re = (Integer.parseInt(tempp) - 1);
-		String msgcount = re > 1 ? re+"":"";
-		
+		String msgcount = "";
+		if("".equals(tempp) || tempp == null){
+			
+		}else{
+			int re = (Integer.parseInt(tempp) - 1);
+		 	msgcount = re > 1 ? re+"":"";
+		}
 		request.getSession().setAttribute(StringUtil.USER_MESSAGE_COUNT, msgcount);
 		List<Integer> chooseIdList = new ArrayList<Integer>();
 		chooseIdList.add(Integer.parseInt(exam.getChoose1id()));

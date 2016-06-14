@@ -57,6 +57,7 @@ CREATE TABLE _homework(
 	homeworkcontent   	VARCHAR(500) NOT NULL,
 	teacherid     		VARCHAR(100) NOT NULL,
 	description   		NVARCHAR(2000),
+	teachername			VARCHAR(20),
 	time          		VARCHAR(20) NOT NULL
 )
 
@@ -95,6 +96,7 @@ CREATE TABLE _exam(
 	studentid			VARCHAR(100) NOT NULL,
 	studentname			VARCHAR(100) NOT NULL,
 	status				INT NOT NULL,
+	studentstatus			INT NOT NULL,
 	choosescore			INT NOT NULL,
 	tempresult			VARCHAR(100),
 	
@@ -137,7 +139,8 @@ CREATE TABLE _exam(
 	
 	positive2id			INT NOT NULL,
 	positive2result		VARCHAR(2000),
-	positive2score		INT NOT NULL
+	positive2score		INT NOT NULL，
+	time          VARCHAR(20) NOT NULL
 	
 )
 

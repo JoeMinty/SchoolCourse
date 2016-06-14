@@ -17,7 +17,7 @@
 			$(document).ready(function() {
 				resize();
 				hideDangerInfo();
-				init();
+				
 
 				$("#regist button").click(function(event) {//创建事件对象
 					var flag = showDangerInfo("regist");
@@ -36,11 +36,6 @@
 				showMsg();
 			});
 
-			function showMsg(){
-				if("${msg}"!=''){
-					$('#myModal').modal('show');
-					}
-			}
 		
 			// 后续屏幕大小切换通过方法计算页面布局
 			function resize() {
@@ -92,7 +87,12 @@
 					return flag;
 				}
 			}
-			
+
+			function showMsg(){
+				if("${msg}"!=''){
+					$('#myModal').modal('show');
+				}
+			}
 			
 		</script>
 	</head>

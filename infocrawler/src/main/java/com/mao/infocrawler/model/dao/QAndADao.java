@@ -14,4 +14,6 @@ public interface QAndADao extends IOperations<Question> {
 	 
 	 int findAnswerCount (final String sql);
 	 
+	
+	 
 }

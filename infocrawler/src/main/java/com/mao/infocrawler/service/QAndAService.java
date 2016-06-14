@@ -14,4 +14,5 @@ public interface QAndAService extends IOperations<Question> {
 	
 	boolean addQuestion(String questionname,String description,String askuserid,String username);
 	
+	List<String> getHotQuestions(String sql);
 }

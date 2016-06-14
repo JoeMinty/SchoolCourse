@@ -12,4 +12,5 @@ public interface AnswersService extends IOperations<Answers> {
 	
 	boolean addAnswer(String questionid,String answercontent,String time,String answerusername);
 	
+	List<String> getHotQuestions(String sql);
 }

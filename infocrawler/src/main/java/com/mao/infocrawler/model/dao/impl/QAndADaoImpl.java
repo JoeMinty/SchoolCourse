@@ -29,5 +29,7 @@ public class QAndADaoImpl extends AbstractHibernateDao<Question> implements QAnd
 	}
 
 	
+
+	
 	
 }

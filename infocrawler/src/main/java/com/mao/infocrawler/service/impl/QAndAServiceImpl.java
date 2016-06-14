@@ -62,8 +62,11 @@ public class QAndAServiceImpl extends AbstractService<Question> implements QAndA
 		return result;
 	}
 
-	
+	@Override
+	public List<String> getHotQuestions(String sql) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 
-	
 
 }

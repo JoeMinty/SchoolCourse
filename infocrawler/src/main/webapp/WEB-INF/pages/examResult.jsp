@@ -24,6 +24,7 @@
 
 			function init(){
 				if("${positivescore}"!="1"){
+					$("#showpositive").css('display', 'none');
 					$("#positivescore1").css('display', 'none');
 					$("#positivescore2").css('display', 'none');
 				}
@@ -58,7 +59,7 @@
 
 		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		       <ul class="nav navbar-nav" >
-		        <li><a href="/infocrawler/topage?pagename=index">主页<span class="sr-only">(current)</span></a></li>
+		        <li><a href="/infocrawler/pagehome">主页<span class="sr-only">(current)</span></a></li>
 		        <li><a href="/infocrawler/topage?pagename=about">课程简介</a></li>
 		        <li><a href="/infocrawler/topage?pagename=catlog">教学大纲</a></li>
 		        <li id="onlineExam"><a href="/infocrawler/initExamPage">在线考试</a></li>
@@ -156,13 +157,13 @@
 							</div>
 						</div> 
 
-						<div class="col-md-12" style="margin-top:10px;border-bottom:1px solid #ddd;" >
+						<div class="col-md-12" style="margin-top:10px;border-bottom:1px solid #ddd;" id="showpositive">
 							<h3><strong>主观题：</strong></h3>
 							<div class="col-md-12" style="margin-left:8px;">					
 									<div class="col-md-12"  style="margin-top:10px;padding:0;font-size:18px;">
 									第一题：${positive1.content}
 									<div class="col-md-12" >
-										<textarea class="col-md-11" name="positive1" rows="5">${exam.positive1result}</textarea>
+										<textarea class="col-md-11" name="positive1" rows="5" readonly="readonly">${exam.positive1result}</textarea>
 									</div>
 									<div id="positivescore1">您此题的得分为<span style="color:red">${exam.positive1score}</span>分</div>
 									</div>
@@ -170,16 +171,16 @@
 									<div class="col-md-12" style="margin-top:10px;padding:0;font-size:18px;">
 									第二题：${positive2.content}
 									<div class="col-md-12">
-										<textarea class="col-md-11" name="positive2" rows="5">${exam.positive2result}</textarea>
+										<textarea class="col-md-11" name="positive2" rows="5" readonly="readonly">${exam.positive2result}</textarea>
 									</div>
 									<div id="positivescore2">您此题的得分为<span style="color:red">${exam.positive1score}</span>分</div>
 									</div>   
 							</div>
-							<div class="center-block col-md-12" style="margin:20px 0;">
+							
+						</div> 
+					<div class="center-block col-md-12" style="margin:20px 0;">
 								 	<button type="submit" class="btn  btn-primary col-md-3 col-md-offset-4">确定</button>
 								</div>
-						</div> 
-					
 					</form>
 				</div>
 			</div>
